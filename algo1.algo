@@ -1,0 +1,29 @@
+ALGORITHM algorithm_name
+VAR
+    i,j,n : INTEGER;
+    number_of_characters : INTEGER:=0;
+    number_of_words : INTEGER:=0;
+    number_of_vowels  : INTEGER:=0;
+    sentence : STRING;
+BEGIN
+    FOR i FROM 0 TO sentence.length-1 STEP 1  DO
+        number_of_characters := number_of_characters + 1;
+    END_FOR
+    Write("the number of characters is : " + number_of_characters)
+
+    FOR j FROM 0 TO sentence.length-1 STEP 1  DO
+        IF (sentence[j]=" ") THEN
+          number_of_words := number_of_words + 1 ; 
+        END_IF
+    END_FOR
+    Write("The number of words in the sentence is : " + number_of_words)
+
+    FOR n FROM 0 TO sentence.length-1 STEP step  DO
+        IF (sentence[n]="A" Or "E" Or "I" Or "O" Or "U" Or "a" Or "e" Or "i" Or "o" Or "u") THEN
+          number_of_vowels := number_of_vowels + 1;  
+        END_IF
+    END_FOR
+    Write("The number of vowels in the sentence is : " + number_of_vowels )
+    
+
+END
